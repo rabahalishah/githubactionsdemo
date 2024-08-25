@@ -16,7 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: git fetch
-      - run: git checkout main
+      - run: git checkout main --allow-unrelated-histories
       - run: git pull origin main
       - run: git merge feature
       - run: git push origin main
