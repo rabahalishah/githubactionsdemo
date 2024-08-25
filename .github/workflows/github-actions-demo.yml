@@ -18,7 +18,7 @@ jobs:
       - run: git fetch origin
       - run: git checkout main
       - run: git pull origin main
-      - run: git pull origin feature
+      - run: git pull feature
       - run: git add *
       - run: git commit -m "workflow commit"
       - run: git push origin main
