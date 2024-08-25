@@ -15,9 +15,9 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: git fetch
-      - run: git checkout main --allow-unrelated-histories
+      - run: git fetch origin
+      - run: git checkout main
       - run: git pull origin main
-      - run: git merge feature
+      - run: git merge --force feature
       - run: git push origin main
       - run: echo "🍏 This job's status is ${{ job.status }}."
