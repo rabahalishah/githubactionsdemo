@@ -15,7 +15,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - name: Merging feature code to main branch
       - run: git checkout main
       - run: git pull origin main
       - run: git merge feature
