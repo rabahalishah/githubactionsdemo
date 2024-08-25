@@ -17,7 +17,9 @@ jobs:
           ls ${{ github.workspace }}
       - run: git fetch origin
       - run: git checkout main
-      - run: git pull origin main --allow-unrelated-histories
-      - run: git merge feature
+      - run: git pull origin main
+      - run: git pull origin feature
+      - run: git add *
+      - run: git commit -m "workflow commit"
       - run: git push origin main
       - run: echo "🍏 This job's status is ${{ job.status }}."
